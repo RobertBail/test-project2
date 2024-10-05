@@ -1,0 +1,33 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  height: 100%;
+  margin: 3px;
+  padding: 3px;
+  text-align: center;
+  align-items: center;
+  flex: auto;
+  color:#13274F;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 1px;
+  color:#dd2707;
+  font-weight: bold;
+}
+
+li{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+h1 {
+  margin-left:20px;
+}
+
+input {
+  width: 260px;
+  font-size: 15px;
+}

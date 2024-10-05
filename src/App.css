@@ -1,0 +1,20 @@
+body {
+  height: 100%;
+  margin: 3px;
+  padding: 3px;
+  text-align: center;
+  align-items: center;
+  flex: auto;
+  font-family: sans-serif;
+  color:#13274F;
+  margin-left: 5px;
+  margin-right: 5px;
+ }
+
+ h1 {   
+  font-size:40px;
+  text-align: center;
+  align-items: center;
+
+ }
+
