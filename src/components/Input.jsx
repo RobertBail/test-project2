@@ -1,27 +1,43 @@
-import { useState } from "react"
+import { useState } from "react";
+import ItemList from './ItemList';
 
-const Input = ({ onChangeCallback }) => {
+//const Input = ({ onChangeCallback }) => {
   // state to handle the input value
-  const [value, setValue] = useState('')
-
+ // const [searchField, setSearchField] = useState("");
+ // const [searchShow, setSearchShow] = useState(false); 
   // new handler function that will update the state 
   // when the input changes
-  const handleChange = (e) => {
-    const inputValue = e.target.value;
-    setValue(inputValue)
-    // if the component receives a callback, call it,
-    // and pass the input value as an argument
-    onChangeCallback && onChangeCallback(inputValue)
-  }
+ // const handleChange = e => {
+ //   setSearchField(e.target.value);
+ //   if(e.target.value===""){
+ //     setSearchShow(false);
+  //  }
+  //  else {
+ //     setSearchShow(true);
+  //  }
+ // }
 
-  return (
-    <input
-      type="text"
-      value={value}
-      onChange={handleChange}
-      placeholder='Type to search products'
-    />
-  )
-}
+ // function ItemList() {
+//    if (searchShow) {
+ //     return (
+        
+ //         <ItemList items={filteredProducts} />
+  
+ //     );
+ //   }
+ // }
 
-export default Input
+ // return (
+ // <div>
+ //   <input
+ //     type="text"
+ //     value={value}
+  //    onChange={handleChange}
+  //    placeholder='Type to search products'
+  //  />
+ //   {ItemList()}
+ // </div>
+ // )
+//}
+
+//export default Input

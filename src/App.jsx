@@ -1,58 +1,60 @@
 import { useState, useEffect } from 'react'
-import ItemList from './components/ItemList'
-import Input from './components/Input'
+import ItemSearch from './components/ItemSearch'
+//import Input from './components/Input'
 //future? link product names to URLs each, coles or WW etc. details
 
 function App() {
-  const [apiProducts, setApiProducts] = useState([])
+  //const [apiProducts, setApiProducts] = useState([])
   // initialize the loading state as true
-  const [loading, setLoading] = useState(true)
+ // const [loading, setLoading] = useState(true)
   // initialize the error state as null
-  const [error, setError] = useState(null)
+ // const [error, setError] = useState(null)
   //const [searchItem, setSearchItem] = useState('')
-  const [filteredProducts, setFilteredProducts] = useState([])
-  
-  const filterItems = (searchTerm) => { 
-    // we previously set the input state here, 
-    // you can remove that now
-    const filteredProducts = apiProducts.filter((products) =>
-      products.title.toLowerCase().includes(searchTerm.toLowerCase())
-      
-    );
+ // const [filteredProducts, setFilteredProducts] = useState([])
 
-    setFilteredProducts(filteredProducts);
-  }
-
-  useEffect(() => {
-    fetch('https://dummyjson.com/products')
-      .then(response => response.json())
-      .then(data => {
-        setApiProducts(data.products)
-        setFilteredProducts(data.products)
-      })
-      .catch(err => {
-        console.log(err)
-        // update the error state
-        setError(err)
-      })
-      .finally(() => {
-        // wether we sucessfully get the products or not, 
-        // we update the loading state
-        setLoading(false)
-      })
-  }, [])
+ // const [searchItem, setSearchItem] = useState("");
+ // const [searchShow, setSearchShow] = useState(false); 
 
 
-  return (
-    <>
-      <Input onChangeCallback={filterItems} />
-      {/* if the data is loading, show a proper message */}
-      {loading && <p>Loading...</p>}
-      {/* if there's an error, show a proper message */}
-      {error && <p>There was an error loading the products</p>}
-      {/* if it finished loading, render the items */}
-      {!loading && !error && <ItemList items={filteredProducts} />}
-    </>
+  //const Input = ({ onChangeCallback }) => {
+    // state to handle the input value
+
+    // new handler function that will update the state 
+    // when the input changes
+
+  //  function ItemList() {
+  //    if (searchShow) {
+  //      return (
+          
+  //          <ItemList items={filteredProducts} />
+    
+   //     );
+   //   }
+  //  }
+
+  //const ItemList = ({items}) => {
+  //  if (searchShow) {
+   // return (
+    //  <>
+     //   {/* replace filteredProducts with items*/}
+      //  {items.length === 0
+      //    ? <p>No products found</p>
+       //   : <ul>
+        //    {items.map(item => <li key={item.id}>{item.title}: {item.description} Price: {item.price} Ratings: {item.rating} Stock: {item.stock}</li>)}
+      //    </ul>
+   //     }
+ //     </>
+//    )
+ // }
+//}
+ 
+
+
+return (
+<> 
+  <ItemSearch/>
+
+</>
   )
 }
 
