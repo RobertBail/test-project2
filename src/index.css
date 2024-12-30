@@ -27,6 +27,13 @@ h1 {
   margin-left:20px;
 }
 
+h3 {   
+  padding-top:15px;
+  padding-bottom:1px;
+  text-decoration: underline;
+ 
+  }
+
 input {
   width: 260px;
   font-size: 15px;
